@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 
 export default function Home() {
 	const [showIntro, setShowIntro] = useState(true);
@@ -45,7 +46,11 @@ export default function Home() {
 				</>
 			)}
 
-			{showStartButton && <button className='mt-48 px-6 py-3 bg-yellow-500 text-black rounded mx-auto block z-10'>Start Exploring</button>}
+			{showStartButton && (
+				<button className='block mt-48 px-6 py-3 bg-yellow-500 text-black rounded mx-auto'>
+					<Link href='/main'>Start Exploring</Link>
+				</button>
+			)}
 		</main>
 	);
 }
