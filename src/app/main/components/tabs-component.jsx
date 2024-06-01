@@ -1,6 +1,7 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import CardComponent from './card';
 import CardsComponent from './cards';
+import { fetchItems } from '@/actions/fetchItems';
 
 export default function TabsComponents() {
 	return (
@@ -14,13 +15,13 @@ export default function TabsComponents() {
 				<TabsTrigger value='starships'>Starships</TabsTrigger>
 			</TabsList>
 			<TabsContent value='chars'>
-				<CardsComponent />
+				<CardsComponent point='peoples' />
 			</TabsContent>
 			<TabsContent value='planets'>
-				<CardsComponent />
+				<CardsComponent point='planets' />
 			</TabsContent>
 			<TabsContent value='starships'>
-				<CardsComponent />
+				<CardsComponent point='starships' />
 			</TabsContent>
 		</Tabs>
 	);
