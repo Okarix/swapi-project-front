@@ -2,7 +2,11 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 
 export default function CardComponent() {
 	return (
-		<Card>
+		<Card className='text-[#feda4a]'>
+			<img
+				src='https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/User-avatar.svg/2048px-User-avatar.svg.png'
+				alt='Avatar'
+			/>
 			<CardHeader>
 				<CardTitle>Card Title</CardTitle>
 				<CardDescription>Card Description</CardDescription>
